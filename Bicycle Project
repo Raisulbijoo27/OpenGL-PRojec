@@ -380,64 +380,7 @@ void drawSeat()
       glVertex3f(-1.0f,-1.0f,1.0f);
    glEnd();
 }
-/*
-void drawSeat1()
-{
-    glBegin(GL_POLYGON);
-      glVertex3f(-0.1f, 1.0f, -0.5f);
-      glVertex3f(   1.0f, 1.0f, -0.3f);
-      glVertex3f( 1.0f, 1.0f,  0.3f);
-      glVertex3f(-0.1f, 1.0f,  0.5f);
-      glVertex3f(-0.5f, 1.0f,  1.0f);
-      glVertex3f(-1.0f, 1.0f,  1.0f);
-      glVertex3f(-1.0f, 1.0f, -1.0f);
-      glVertex3f(-0.5f, 1.0f, -1.0f);
-   glEnd();
-   glBegin(GL_POLYGON);
-      glVertex3f(-0.1f, -1.0f, -0.5f);
-      glVertex3f(   1.0f, -1.0f, -0.3f);
-      glVertex3f( 1.0f, -1.0f,  0.3f);
-      glVertex3f(-0.1f, -1.0f,  0.5f);
-      glVertex3f(-0.5f, -1.0f,  1.0f);
-      glVertex3f(-1.0f, -1.0f,  1.0f);
-      glVertex3f(-1.0f, -1.0f, -1.0f);
-      glVertex3f(-0.5f, -1.0f, -1.0f);
-   glEnd();
-   glBegin(GL_QUADS);
-      glVertex3f(1.0f,1.0f,-0.3f);
-      glVertex3f(1.0f,1.0f,0.3f);
-      glVertex3f(1.0f,-1.0f,0.3f);
-      glVertex3f(1.0f,-1.0f,-0.3f);
-      glVertex3f(1.0f,1.0f,0.3f);
-      glVertex3f(-0.1f,1.0f,0.5f);
-      glVertex3f(-0.1f,-1.0f,0.5f);
-      glVertex3f(1.0f,-1.0f,0.3f);
-      glVertex3f(1.0f,1.0f,-0.3f);
-      glVertex3f(-0.1f,1.0f,-0.5f);
-      glVertex3f(-0.1f,-1.0f,-0.5f);
-      glVertex3f(1.0f,-1.0f,-0.3f);
-      glVertex3f(-0.1f,1.0f,0.5f);
-      glVertex3f(-0.5f,1.0f,1.0f);
-      glVertex3f(-0.5f,-1.0f,1.0f);
-      glVertex3f(-0.1f,-1.0f,0.5f);
-      glVertex3f(-0.1f,1.0f,-0.5f);
-      glVertex3f(-0.5f,1.0f,-1.0f);
-      glVertex3f(-0.5f,-1.0f,-1.0f);
-      glVertex3f(-0.1f,-1.0f,-0.5f);
-      glVertex3f(-0.5f,1.0f,1.0f);
-      glVertex3f(-1.0f,1.0f,1.0f);
-      glVertex3f(-1.0f,-1.0f,1.0f);
-      glVertex3f(-0.5f,-1.0f,1.0f);
-      glVertex3f(-0.5f,1.0f,-1.0f);
-      glVertex3f(-1.0f,1.0f,-1.0f);
-      glVertex3f(-1.0f,-1.0f,-1.0f);
-      glVertex3f(-0.5f,-1.0f,-1.0f);
-      glVertex3f(-1.0f,1.0f,1.0f);
-      glVertex3f(-1.0f,1.0f,-1.0f);
-      glVertex3f(-1.0f,-1.0f,-1.0f);
-      glVertex3f(-1.0f,-1.0f,1.0f);
-   glEnd();
-}*/
+
 void drawPedals()
 {
  //Right pedal
@@ -473,7 +416,6 @@ void drawPedals()
          glutSolidCube(1.0f);
       glPopMatrix();
 
-      //Left leg put pedal
       glPushMatrix();
          glTranslatef(0.25f,0.0f,-0.15f);
          glRotatef(pedalAngle-180.0f,0.0f,0.0f,1.0f);
@@ -670,7 +612,7 @@ void mouse(int button,int state,int x,int y)
          }
          break;
       case GLUT_RIGHT_BUTTON:
-         /*   DO NOTHING   */
+         
          break;
    }
    glutPostRedisplay();
@@ -678,7 +620,7 @@ void mouse(int button,int state,int x,int y)
 
 void passive(int x,int y)
 {
-/*   DO NOTHING   */
+
 }
 void motion(int x,int y)
 {
@@ -739,6 +681,8 @@ void glSetupFuncs(void)
 void help(void)
 {
     glColor3f(1.0,0.0,0.0);
+    
+
    cout<<"         Use the following shortcuts to move the Bicycle..."<<endl;
    cout<<"          _______________________________________________"<<endl;
    cout<<"         |'+' to increase the speed                      |"<<endl;
@@ -746,8 +690,8 @@ void help(void)
    cout<<"         |'b' to rotate the handle clockwise             |"<<endl;
    cout<<"         |'z' to rotate the handle anti-clockwise        |"<<endl;
    cout<<"         |'s' or 'S' to reset the scene                  |"<<endl;
-   cout<<"         |'l' Arrow keys to move the camera              |"<<endl;
-   cout<<"         |'p' Mouse to move the scene                    |"<<endl;
+   cout<<"         |--> Arrow keys to move the camera              |"<<endl;
+   cout<<"         |--> Mouse to move the scene                    |"<<endl;
    cout<<"         |_______________________________________________|"<<endl;
 
 }
